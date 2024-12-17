@@ -13,7 +13,7 @@
                             </span>
                         </a>
                     </li>
-		           {{ end }}
+                    {{ end }}
                     {{ with .Site.Params.social.twitter }}
                     <li>
                         <a href="{{ . }}">
@@ -33,7 +33,7 @@
                             </span>
                         </a>
                     </li>
-		            {{ end }}
+                    {{ end }}
                     {{ with .Site.Params.social.weibo }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -43,7 +43,7 @@
                             </span>
                         </a>
                     </li>
-		           {{ end }}
+                    {{ end }}
                     {{ with .Site.Params.social.facebook }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -53,9 +53,9 @@
                             </span>
                         </a>
                     </li>
-		           {{ end }}
+                    {{ end }}
 
-		            <!-- Huabing: add wechat QR code link -->
+                    <!-- Huabing: add wechat QR code link -->
                     {{ with .Site.Params.social.wechat }}
                     <li>
                         <a target="_blank" href="{{ . | relURL }}">
@@ -65,7 +65,7 @@
                             </span>
                         </a>
                     </li>
-		            {{ end }}
+                    {{ end }}
                     {{ with .Site.Params.social.github }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -75,7 +75,7 @@
                             </span>
                         </a>
                     </li>
-		            {{ end }}
+                    {{ end }}
                     {{ with .Site.Params.social.gitlab }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -105,7 +105,7 @@
                             </span>
                         </a>
                     </li>
-		           {{ end }}
+                    {{ end }}
                     {{ with .Site.Params.social.medium }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -165,49 +165,49 @@
                             </span>
                         </a>
                     </li>
-            {{ end }}
-            {{ with .Site.Params.social.xing }}
-            <li>
-                <a target="_blank" href="{{ . }}">
-                    <span class="fa-stack fa-lg">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-xing fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-            </li>
-            {{ end }}
-            {{ with .Site.Params.social.instagram }}
-            <li>
-                <a target="_blank" href="{{ . }}">
-                    <span class="fa-stack fa-lg">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-            </li>
-            {{ end }}
-            {{ with .Site.Params.social.flickr }}
-            <li>
-                <a target="_blank" href="{{ . }}">
-                    <span class="fa-stack fa-lg">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-flickr fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-            </li>
-           {{ end }}
-           {{ if .Site.Params.social.rss }}
-                   <li>
+                    {{ end }}
+                    {{ with .Site.Params.social.xing }}
+                    <li>
+                        <a target="_blank" href="{{ . }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-xing fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {{ end }}
+                    {{ with .Site.Params.social.instagram }}
+                    <li>
+                        <a target="_blank" href="{{ . }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {{ end }}
+                    {{ with .Site.Params.social.flickr }}
+                    <li>
+                        <a target="_blank" href="{{ . }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-flickr fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {{ end }}
+                    {{ if .Site.Params.social.rss }}
+                    <li>
                        <a href='{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}' rel="alternate" type="application/rss+xml" title="{{ .Site.Title | default "" }}" >
-                           <span class="fa-stack fa-lg">
-                               <i class="fas fa-circle fa-stack-2x"></i>
-                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
-                           </span>
-                       </a>
-                   </li>
-            {{ end }}
-             </ul>
-		<p class="copyright text-muted">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+                <p class="copyright text-muted">
                     Copyright &copy; {{ .Site.Title }} {{ now.Year }} {{- if .Site.Params.icp }} | {{ with .Site.Params.icp }}{{ . | markdownify }}{{ end }}{{- end}}
                     {{ if .Site.Params.upstreamAttribution }}
                     <br>
@@ -229,12 +229,12 @@
 <!-- async load function -->
 <script>
     function loadAsync(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
     }
 </script>
 
@@ -283,17 +283,17 @@
 {{ if .Site.Params.ba_track_id }}
 <script>
     (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
         if (curProtocol === 'https'){
-       bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      }
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
       else{
-      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
 </script>
 
 <!-- Baidu Tongji -->
@@ -304,10 +304,10 @@
     // Originial
     var _hmt = _hmt || [];
     (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?" + _baId;
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
     })();
 </script>
 {{ end }}
@@ -321,7 +321,7 @@
         //if ('page.multilingual' == 'true') {
         //    _containerSelector = 'div.post-container.active'
         //} else {
-            _containerSelector = 'div.post-container'
+        _containerSelector = 'div.post-container'
         //}
 
         // init
@@ -377,7 +377,7 @@
 {{ if eq (.Param "multilingual") true }}
 <script type="text/javascript">
     // get nodes
-    var $zh = document.querySelector(".zh");
+    var $ptbr = document.querySelector(".br");
     var $en = document.querySelector(".en");
     var $select = document.querySelector("select");
 
@@ -394,10 +394,11 @@
     function _render() {
         var lang = getLang()
         // zh
-        if (lang == "zh") {
+        if (lang == "br") {
+
             $select.selectedIndex = 0;
-            $zh.style.display = "block";
-            $zh.classList.add("active");
+            $ptbr.style.display = "block";
+            $ptbr.classList.add("active");
             $en.style.display = "none";
             $en.classList.remove("active");
             // default to en
@@ -405,8 +406,8 @@
             $select.selectedIndex = 1;
             $en.style.display = "block";
             $en.classList.add("active");
-            $zh.style.display = "none";
-            $zh.classList.remove("active");
+            $ptbr.style.display = "none";
+            $ptbr.classList.remove("active");
         }
         // interop with catalog
         generateCatalog(".catalog-body");
@@ -416,6 +417,8 @@
     function onLanChange(index) {
         if (index == 0) {
             lang = "zh"
+        } else if (index == 2) {
+            lang = "br"
         } else {
             lang = "en"
         }
@@ -429,17 +432,18 @@
 
 {{ if or .Page.Params.plantuml .Site.Params.plantuml }}
 <!-- PlantUML -->
-<script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js"
+    integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
 <script>
-(function(){
-  let plantumlPrefix = "language-plantuml";
-  Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
-    let image = document.createElement("IMG");
-    image.loading = 'lazy'; // Lazy loading
-    image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
-    code.parentNode.parentNode.insertBefore(image, code.parentNode);
-    code.parentNode.style.display = 'none';
-  });
-})();
+    (function () {
+        let plantumlPrefix = "language-plantuml";
+        Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function (code) {
+            let image = document.createElement("IMG");
+            image.loading = 'lazy'; // Lazy loading
+            image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+            code.parentNode.parentNode.insertBefore(image, code.parentNode);
+            code.parentNode.style.display = 'none';
+        });
+    })();
 </script>
 {{ end }}
