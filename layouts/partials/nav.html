@@ -37,7 +37,18 @@
                     {{ end }}
                     
 		    {{ range .Site.Params.addtional_menus }}
-                        <li><a href="{{.href | relLangURL}}/">{{.title}}</a></li>
+                        {{ if .children }}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ .title }} <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                {{ range .children }}
+                                <li><a href="{{ .href | relLangURL }}">{{ .title }}</a></li>
+                                {{ end }}
+                            </ul>
+                        </li>
+                        {{ else }}
+                        <li><a href="{{ .href | relLangURL }}">{{ .title }}</a></li>
+                        {{ end }}
                     {{ end }}
 		            <li>
                         <a href="{{ "search" | relURL }}"><i class="fa fa-search"></i></a>
